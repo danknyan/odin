@@ -2,12 +2,12 @@
 
 
 project-one:
-  name: Project Type One
+  name: Machine Learning
   parent-category: my-projects
   parent-category-name: Selected Projects
-  description: This is your first subcategory!
+  description: AKA vanilla data science.\nThis category contains projects that focus on extracting, cleaning, visualizing, model-building, repetition as needed and final insights!
 project-two:
-  name: Project Category Two
+  name: Natural Language Processing
   parent-category: my-projects
   parent-category-name: Selected Projects
   description: This is your second subcategory!
