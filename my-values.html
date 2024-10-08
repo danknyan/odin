@@ -1,0 +1,10 @@
+---
+layout: category
+category: my-values
+title: My Values
+---
+
+
+{% for post in site.categories.my-values %}
+  {% include article-card.html %}
+{% endfor %}
