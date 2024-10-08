@@ -53,11 +53,11 @@ nav_button: Return to Portfolio Home
 nav_button_link: https://danknyan.github.io/odin/
 
 # More Info
-help_one_title: Previous Projects
+help_one_title: Selected Projects
 help_one_content: Get to know how my workflow can apply to your situation and others like it.
 help_one_button: Projects
 # TODO
-help_one_link: https://github.com/TeaGuns/odin/issues
+help_one_link: /my-projects
 
 help_two_title: Contact
 help_two_content: Seen enough? Feel free to get in touch with me.
