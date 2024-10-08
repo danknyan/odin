@@ -4,6 +4,9 @@
 my-projects:
   name: Selected Projects
   description: workflow and past projects
+using-odin:
+  name: Using Odin
+  description: Welcome to Odin, time to get started
 my-values:
   name: My Values
   description: motivation and philosophy
