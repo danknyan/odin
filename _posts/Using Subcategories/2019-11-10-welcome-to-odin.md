@@ -2,10 +2,10 @@
 layout: post
 title: "Subcategory Post"
 date: 2019-11-05 08:44:38 -0400
-category: subcategory-one
+category: project-one
 subcategory: 
-author: mac
-short-description: A quick overview of Odin to get you started
+author: dan
+short-description: A standard classification task to demonstrate a typical workflow.
 ---
 
 -----
