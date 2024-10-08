@@ -3,6 +3,7 @@ layout: post
 title: "This is Dan's test project"
 date: 2019-11-05 08:44:38 -0400
 category: my-projects
+subcategory: project-one
 author: dan
 short-description: This is a jupyter about calssficiation
 ---
