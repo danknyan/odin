@@ -1,18 +1,18 @@
 #Tihs file defines all categories that live within a parent category
 
 
-subcategory-one:
+project-one:
   name: Subcategory One
-  parent-category: using-subcategories
-  parent-category-name: Using Subcategories
+  parent-category: my-projects
+  parent-category-name: Selected Projects
   description: This is your first subcategory!
-subcategory-two:
+project-two:
   name: Subcategory Two
-  parent-category: using-subcategories
-  parent-category-name: Using Subcategories
+  parent-category: my-projects
+  parent-category-name: Selected Projects
   description: This is your second subcategory!
-subcategory-three:
+project-three:
   name: Subcategory Three
-  parent-category: using-subcategories
-  parent-category-name: Using Subcategories
+  parent-category: my-projects
+  parent-category-name: Selected Projects
   description: This is your third subcategory!
