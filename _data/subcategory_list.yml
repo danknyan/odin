@@ -2,17 +2,17 @@
 
 
 project-one:
-  name: Subcategory One
+  name: Project Type One
   parent-category: my-projects
   parent-category-name: Selected Projects
   description: This is your first subcategory!
 project-two:
-  name: Subcategory Two
+  name: Project Category Two
   parent-category: my-projects
   parent-category-name: Selected Projects
   description: This is your second subcategory!
 project-three:
-  name: Subcategory Three
+  name: Project Category Three
   parent-category: my-projects
   parent-category-name: Selected Projects
   description: This is your third subcategory!
