@@ -17,7 +17,7 @@ subcategory-one:
   parent-category-name: Using Subcategories
   description: This is your first subcategory!
 machine-learning:
-  name: Machine Learning
+  name: Machine Learning Test
   parent-category: my-projects
   parent-category-name: Selected Projects
   description: model-building to insights!
