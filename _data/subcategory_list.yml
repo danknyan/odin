@@ -11,8 +11,8 @@ project-two:
   parent-category: my-projects
   parent-category-name: Selected Projects
   description: This is your second subcategory!
-project-three:
-  name: Project Category Three
+subcategory-one:
+  name: Subcategory One
   parent-category: my-projects
   parent-category-name: Selected Projects
   description: This is your third subcategory!
