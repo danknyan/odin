@@ -7,6 +7,8 @@ layout: default
 {% assign page_category = site.data.category_list[page.category] %}
 
 
+{% assign page_subcategory = site.data.subcategory_list[page.subcategory] %}
+
 <div class="container-full">
     <div class="container grid-xl">
       <div class="mt-12 show-md"></div>
@@ -15,10 +17,13 @@ layout: default
         <div class="column col-12">
           <ul class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="{{ site.url }}{{ site.baseurl }}">Help Center Home</a>
+              <a href="{{ site.url }}{{ site.baseurl }}">{{ site.content_type }} Home</a>
             </li>
             <li class="breadcrumb-item">
-              <a href="../{{ page.category }}">{{ page_category.name }}</a>
+              <a href="{{ site.url }}{{ site.baseurl }}/{{ page_subcategory.parent-category | slugify }}">{{ page_subcategory.parent-category-name }}</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="../{{ page_subcategory.name }}">{{ page_category.name }}</a>
             </li>
             <li class="breadcrumb-item">
               <a href="#">{{ page.title }}</a>
