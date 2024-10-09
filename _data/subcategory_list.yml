@@ -13,6 +13,6 @@ project-two:
   description: This is your second subcategory!
 subcategory-one:
   name: Subcategory One
-  parent-category: my-projects
-  parent-category-name: Selected Projects
-  description: This is your third subcategory!
+  parent-category: using-subcategories
+  parent-category-name: Using Subcategories
+  description: This is your first subcategory!
