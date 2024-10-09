@@ -20,10 +20,7 @@ layout: default
               <a href="{{ site.url }}{{ site.baseurl }}">{{ site.content_type }} Home</a>
             </li>
             <li class="breadcrumb-item">
-              <a href="{{ site.url }}{{ site.baseurl }}/{{ page_subcategory.parent-category | slugify }}">{{ page_subcategory.parent-category-name }}</a>
-            </li>
-            <li class="breadcrumb-item">
-              <a href="../{{ page_subcategory.name }}">{{ page_category.name }}</a>
+              <a href="../{{ page.category }}">{{ page_category.name }}</a>
             </li>
             <li class="breadcrumb-item">
               <a href="#">{{ page.title }}</a>
