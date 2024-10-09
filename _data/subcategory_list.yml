@@ -5,7 +5,7 @@ project-one:
   name: Machine Learning
   parent-category: my-projects
   parent-category-name: Selected Projects
-  description: AKA vanilla data science.\nThis category contains projects that focus on extracting, cleaning, visualizing, model-building, repetition as needed and final insights!
+  description: AKA vanilla data science: from extracting, cleaning, visualizing, model-building to insights!
 project-two:
   name: Natural Language Processing
   parent-category: my-projects
