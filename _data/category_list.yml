@@ -7,8 +7,8 @@ my-projects:
 using-odin:
   name: Using Odin
   description: Welcome to Odin, time to get started
-my-values:
-  name: My Values
+using-subcategories:
+  name: Using Subcategories 
   description: motivation and philosophy
 my-cv:
   name: Curriculum Vitae
