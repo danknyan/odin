@@ -7,8 +7,6 @@ layout: default
 {% assign page_category = site.data.category_list[page.category] %}
 
 
-{% assign page_subcategory = site.data.subcategory_list[page.subcategory] %}
-
 <div class="container-full">
     <div class="container grid-xl">
       <div class="mt-12 show-md"></div>
@@ -17,20 +15,11 @@ layout: default
         <div class="column col-12">
           <ul class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="{{ site.url }}{{ site.baseurl }}">{{ site.content_type }} Home</a>
+              <a href="{{ site.url }}{{ site.baseurl }}">Help Center Home</a>
             </li>
-            <!-- Copied breadcrumb from subcat page, doesn't work, cahnged to page_cate -->
             <li class="breadcrumb-item">
-              <a href="{{ site.url }}{{ site.baseurl }}/{{ page_category | slugify }}">{{ page_category.name }}</a>
+              <a href="../{{ page.category }}">{{ page_category.name }}</a>
             </li>
-            <!-- added here sub cat, cat missing in breadcrumbs, copied previous, added else for use with sub/reg cat psts -->
-            {% if page_subcategory.size > 2 %}
-            <li class="breadcrumb-item">
-              <a href="{{ site.url }}{{ site.baseurl }}/{{ page_subcategory.parent-category | slugify }}/{{ page_subcategory | slugify }}">{{ page_subcategory.parent-category-name }}</a>>{{ page_subcategory.name }}</a>
-            </li>
-              {% else %}
-              <!-- This else clause is intentionally left blank -->
-            {% endif %}
             <li class="breadcrumb-item">
               <a href="#">{{ page.title }}</a>
             </li>
@@ -60,10 +49,6 @@ layout: default
                 {% endif %}
 
               {{ content }}
-
-              
-            
-
 
             </div>
           </div>
