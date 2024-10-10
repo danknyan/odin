@@ -19,9 +19,18 @@ layout: default
             <li class="breadcrumb-item">
               <a href="{{ site.url }}{{ site.baseurl }}">{{ site.content_type }} Home</a>
             </li>
+            <!-- Copied breadcrumb from subcat page-->
             <li class="breadcrumb-item">
-              <a href="../{{ page.category }}">{{ page_category.name }}</a>
+              <a href="{{ site.url }}{{ site.baseurl }}/{{ page_subcategory.parent-category | slugify }}">{{ page_subcategory.parent-category-name }}</a>
             </li>
+            <!-- added here sub cat, cat missing in breadcrumbs, copied previous, added else for use with sub/reg cat psts -->
+            {% if page_subcategory.size > 2 %}
+            <li class="breadcrumb-item">
+              <a href="{{ site.url }}{{ site.baseurl }}/{{ page_subcategory.parent-category | slugify }}/{{ page_subcategory | slugify }}">{{ page_subcategory.parent-category-name }}</a>>{{ page_subcategory.name }}</a>
+            </li>
+              {% else %}
+              <!-- This else clause is intentionally left blank -->
+            {% endif %}
             <li class="breadcrumb-item">
               <a href="#">{{ page.title }}</a>
             </li>

@@ -57,10 +57,10 @@ help_one_title: Selected Projects
 help_one_content: Get to know how my workflow can apply to your situation and others like it.
 help_one_button: Projects
 # TODO
-help_one_link: /my-projects
+help_one_link: odin/my-projects
 
 help_two_title: Contact
-help_two_content: Seen enough? Feel free to get in touch with me.
+help_two_content: Seen enough? Let's get in touch!
 help_two_button: Email
 help_two_link: maito:rishea.dan@gmail.com
 
