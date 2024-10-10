@@ -4,8 +4,12 @@ layout: default
 
 {% include header.html %}
 
-{% assign page_category = site.data.subcategory_list[page.category].name %}
-
+<!-- OG code {% assign page_category = site.data.subcategory_list[page.category].name %} -->
+{% if page.subcategory %}
+{% assign page_category = site.data.subcategory_list[page.subcategory].name %}
+{% else %}
+{% assign page_category = site.data.category_list[page.category].name %}
+{% endif %}
 
 <div class="container-full">
     <div class="container grid-xl">
