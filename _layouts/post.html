@@ -4,7 +4,7 @@ layout: default
 
 {% include header.html %}
 
-{% assign page_category = site.data.category_list[page.category] %}
+{% assign page_category = site.data.subcategory_list[page.category].parent-category-name %}
 
 
 <div class="container-full">
@@ -17,8 +17,9 @@ layout: default
             <li class="breadcrumb-item">
               <a href="{{ site.url }}{{ site.baseurl }}">{{ site.content_type }} Home</a>
             </li>
+            <!-- displays but variable name only so too raw to be used -->
             <li class="breadcrumb-item">
-              <a href="{{ site.url }}{{ site.baseurl }}/{{ page.category }}">{{ page.category }}</a>
+              <a href="{{ site.url }}{{ site.baseurl }}/{{ page.category }}">{{ page_category }}</a>
             </li>
             <li class="breadcrumb-item">
               <a href="#">{{ page.title }}</a>
