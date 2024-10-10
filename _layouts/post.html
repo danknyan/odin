@@ -19,9 +19,9 @@ layout: default
             <li class="breadcrumb-item">
               <a href="{{ site.url }}{{ site.baseurl }}">{{ site.content_type }} Home</a>
             </li>
-            <!-- Copied breadcrumb from subcat page-->
+            <!-- Copied breadcrumb from subcat page, doesn't work, cahnged to page_cate -->
             <li class="breadcrumb-item">
-              <a href="{{ site.url }}{{ site.baseurl }}/{{ page_subcategory.parent-category | slugify }}">{{ page_subcategory.parent-category-name }}</a>
+              <a href="{{ site.url }}{{ site.baseurl }}/{{ page_category | slugify }}">{{ page_category.name }}</a>
             </li>
             <!-- added here sub cat, cat missing in breadcrumbs, copied previous, added else for use with sub/reg cat psts -->
             {% if page_subcategory.size > 2 %}
