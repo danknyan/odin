@@ -5,7 +5,7 @@
   padding: $unit-1 0;
 
   .breadcrumb-item {
-    color: $gray-color;
+    color: $secondary-color;
     display: inline-block;
     margin: 0;
     padding: $unit-1 0;
@@ -14,7 +14,7 @@
       margin-right: $unit-1;
 
       a {
-        color: $gray-color;
+        color: $secondary-color;
         &:hover {
           color: $white;
         }
@@ -31,7 +31,7 @@
 
     &:not(:first-child) {
       &::before {
-        color: $gray-color;
+        color: $secondary-color;
         content: "/";
         padding-right: $unit-2;
       }

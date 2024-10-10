@@ -20,8 +20,8 @@ $secondary-color-dark: darken($secondary-color, 10%) !default;
 $white: #e2e1c6;
 $highlight-color: #51bac5;
 
-// Gray colors Not sure which one is breadcrumb
-$dark-color: #461708 !default;
+// Gray colors
+$dark-color: $primary-color !default;
 $gray-color: #d7d8e1 !default;
 $gray-color-light: #f5f6ff !default;
 $gray-color-dark: #9b9caf !default;
