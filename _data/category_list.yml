@@ -4,11 +4,8 @@
 my-projects:
   name: Selected Projects
   description: workflow and past projects
-using-odin:
-  name: Using Odin
-  description: Welcome to Odin, time to get started
-using-subcategories:
-  name: Using Subcategories 
+my-values:
+  name: My Values
   description: motivation and philosophy
 my-cv:
   name: Curriculum Vitae Test
