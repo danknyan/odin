@@ -23,8 +23,10 @@ title: Home
                     {% assign post_count = 0 %}
                     {% if page.has-subcategories == true %}
                       {% for subcategory in site.data.subcategory_list %}
-                        {% if subcategory.parent-category contains category_name %}
-                          {% assign sub_cat_name = subcategory.name %}
+                        {% capture subcategory_name %}{{ subcategory | first }}{% endcapture %}
+                        {% assign page_subcategory = site.data.subcategory_list[subcategory_name] %}  
+                        {% if page_subcategory.parent-category contains category_name %}
+                          {% assign sub_cat_name = subcategory_name %}
                           {% for post in site.posts %}
                             {% if post.category contains sub_cat_name %}
                               {% assign post_count = post_count | plus: 1 %}
