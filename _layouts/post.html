@@ -5,7 +5,7 @@ layout: default
 {% include header.html %}
 
 <!-- OG code {% assign page_category = site.data.subcategory_list[page.category].name %} -->
-{% if page.subcategory and page.subcategory.size < 2 %}
+{% if page.subcategory %}
 {% assign page_category = site.data.subcategory_list[page.category].name %}
 {% else %}
 {% assign page_category = site.data.category_list[page.category].name %}
