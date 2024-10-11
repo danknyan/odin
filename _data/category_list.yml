@@ -4,6 +4,7 @@
 my-projects:
   name: Selected Projects
   description: workflow and past projects
+  has-subcategories: True
 my-values:
   name: My Values
   description: motivation and philosophy
