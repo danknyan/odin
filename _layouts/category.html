@@ -34,11 +34,12 @@ layout: default
               <div class="card card-link">
                 <div class="card-body text-center my-4">
                   <h5 class="text-bold">{{ page_subcategory.name }}</h5>
-                  <!-- This part doesn't work -->    
+                     
                   {% if subcategory[1].size == 1 %}
-                  <p class="m-0">{{ subcategory[1] | size }} &{{ page.category[1] | size }} &{{ page.category[1] }}& article</p>
+                  <p class="m-0">1 article</p>
                   {% else %}
-                  <p class="m-0">{{ subcategory[1] | size }} &{{ page.category[1] | size }} &{{ page.category[1] }}& articles</p>
+                  <!-- This part doesn't work --> 
+                  <p class="m-0">{{ subcategory[1] }} & {{ page.category[1] | size }} & {{ page.category[1] }} articles</p>
                   {% endif %}
                 </div>
               </div>
