@@ -20,7 +20,6 @@ title: Home
                 <div class="card-body text-center my-4">
                   <h5 class="text-bold">{{ page_category.name }}</h5>
                     <!-- start forloop -->
-                    <!--{% assign category_name = "your-category-name" %}-->
                     {% assign post_count = 0 %}
                     {% for post in site.posts %}
                     {% if post.category contains category_name %}
