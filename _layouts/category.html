@@ -39,7 +39,7 @@ layout: default
                   <p class="m-0">1 article</p>
                   {% else %}
                   <!-- This part doesn't work --> 
-                  <p class="m-0">{{ subcategory[1] }} & {{ page.category[1] | size }} & {{ page.category[1] }} articles</p>
+                  <p class="m-0">{{ subcategory[0] }} & {{ subcategory[1] }} & {{ page.category[1] | size }} & {{ page.category }} articles</p>
                   {% endif %}
                 </div>
               </div>
