@@ -20,7 +20,7 @@ title: Home
                 <div class="card-body text-center my-4">
                   <h5 class="text-bold">{{ page_category.name }}</h5>
                     {% assign article_count = category | last | size %}
-                    <p class="m-0">{{ article_count }} article{% if article_count != 1 %}s{% endif %}</p>
+                    <p class="m-0">{{ article_count }}{{ category | last }} article{% if article_count != 1 %}s{% endif %}</p>
                 </div>
               </div>
             </a>
