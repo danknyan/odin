@@ -6,7 +6,7 @@ layout: default
 
 <!-- OG code {% assign page_category = site.data.subcategory_list[page.category].name %} -->
 {% if page.subcategory %}
-{% assign page_category = site.data.subcategory_list[page.subcategory].name %}
+{% assign page_category = site.data.subcategory_list[page.category].name %}
 {% else %}
 {% assign page_category = site.data.category_list[page.category].name %}
 {% endif %}
@@ -21,7 +21,7 @@ layout: default
             <li class="breadcrumb-item">
               <a href="{{ site.url }}{{ site.baseurl }}">{{ site.content_type }} Home</a>
             </li>
-            <!-- displays but variable name only so too raw to be used -->
+            <!-- still not working -->
             <li class="breadcrumb-item">
               <a href="{{ site.url }}{{ site.baseurl }}/{{ page.category }}">{{ page_category }}</a>
             </li>
