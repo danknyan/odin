@@ -34,6 +34,7 @@ title: Home
                           {% endfor %}
                         {% endif %}
                       {% endfor %}
+                      {% assign post_count = post_count | plus: 9 %}
                     {% else %}
                       {% for post in site.posts %}
                         {% if post.category contains category_name  %}
