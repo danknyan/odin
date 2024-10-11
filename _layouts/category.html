@@ -36,9 +36,9 @@ layout: default
                   <h5 class="text-bold">{{ page_subcategory.name }}</h5>
                   <!-- This part doesn't work -->    
                   {% if subcategory[1].size == 1 %}
-                  <p class="m-0">{{ category[1] | size }} article</p>
+                  <p class="m-0">{{ subcategory[1] | size }} &{{ category[1] | size }} &{{ category[1] }}& article</p>
                   {% else %}
-                  <p class="m-0">{{ category[1] | size }} articles</p>
+                  <p class="m-0">{{ subcategory[1] | size }} &{{ category[1] | size }} &{{ category[1] }}& articles</p>
                   {% endif %}
                 </div>
               </div>
