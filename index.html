@@ -19,8 +19,17 @@ title: Home
               <div class="card card-link">
                 <div class="card-body text-center my-4">
                   <h5 class="text-bold">{{ page_category.name }}</h5>
-                    {% assign article_count = category | last | size %}
-                    <p class="m-0">{{ article_count }}{{ category | last }} article{% if article_count != 1 %}s{% endif %}</p>
+                    <!-- start forloop -->
+                    <!--{% assign category_name = "your-category-name" %}-->
+                    {% assign post_count = 0 %}
+                    {% for post in site.posts %}
+                    {% if post.category contains category_name %}
+                      {% assign post_count = post_count | plus: 1 %}
+                    {% endif %}
+                    {% endfor %}
+                    <!-- output -->
+                    
+                    <p class="m-0">{{ category_name }}: {{ post_count }} article{% if post_count != 1 %}s{% endif %}</p>
                 </div>
               </div>
             </a>
