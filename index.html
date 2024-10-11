@@ -21,7 +21,7 @@ title: Home
                   <h5 class="text-bold">{{ page_category.name }}</h5>
                     <!-- start forloop -->
                     {% assign post_count = 0 %}
-                    {% if category.has-subcategories %}
+                    {% if category.has-subcategories == "True" %}
                       {% for subcategory in site.data.subcategory_list %}
                         {% capture subcategory_name %}{{ subcategory | first }}{% endcapture %}
                         {% assign page_subcategory = site.data.subcategory_list[subcategory_name] %}  
