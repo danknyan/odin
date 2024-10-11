@@ -21,9 +21,18 @@ title: Home
                   <h5 class="text-bold">{{ page_category.name }}</h5>
                     <!-- start forloop -->
                     {% assign post_count = 0 %}
-                    {% for post in site.posts %}
-                    {% if post.category contains category_name %}
-                      {% assign post_count = post_count | plus: 1 %}
+                    {% if page.has-subcategories == true %}
+                      {% for subcategory in site.data.subcategory_list %}
+                      {% if subcategory.parent-category contains category_name %}
+                        {% assign sub_cat_name = subcategory.name %}
+                        {% for post in site.posts %}
+                        {% if post.category contains sub_cat_name %}
+                          {% assign post_count = post_count | plus: 1 %}
+                      {% endif %}
+                    {% else %}
+                      {% for post in site.posts %}
+                      {% if post.category contains category_name  %}
+                        {% assign post_count = post_count | plus: 1 %}
                     {% endif %}
                     {% endfor %}
                     <!-- output -->
