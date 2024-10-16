@@ -22,7 +22,6 @@ title: Home
                     <h5 class="text-bold">{{ page_category.name }}</h5>
                       <!-- start forloop -->
                       {% if category_name == "my-projects" %}
-                        {% assign post_count = post_count | plus: 10 %}
                         
                         {% for subcategory in site.data.subcategory_list %}
 
