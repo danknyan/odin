@@ -5,7 +5,6 @@ layout: default
 
 {% assign page_category = site.data.category_list[page.category] %}
 
-{% assign page_subcategory = site.data.subcategory_list[page.subcategory] %}
 
 <div class="container-full">
   <div class="container grid-xl">
@@ -26,10 +25,9 @@ layout: default
       </div>
       {% if page.has-subcategories == true %}
         {% for subcategory in site.data.subcategory_list %}
-
-          {% assign post_count = 0 %}
           
-          {% if subcategory.parent-category == page.category %}
+          {% if subcategory.parent-category-name == page_category.name %}
+          {% assign post_count = 0 %}
           <!-- For loops -->
           
                   {% for post in site.posts %}
