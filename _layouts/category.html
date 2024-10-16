@@ -31,22 +31,25 @@ layout: default
           {% if page_subcategory.parent-category == page.category %}
             {% assign post_count = 1 %}
             {% for post in site.posts %}
+
             <!-- not sure abotu var names-->
-              {% if post.category == subcategory.name %}
+              {% if post.category == page_subcategory.name %}
+                {% assign post_count = post_count | plus: 1 %}
+              {% else %}
                 {% assign post_count = post_count | plus: 1 %}
               {% endif %}
             {% endfor %}
-          <div class="column col-4 col-md-6 col-sm-12">
-            <a href="{{ site.baseurl }}/{{ subcategory_name }}">
-              <div class="card card-link">
-                <div class="card-body text-center my-4">
-                  <h5 class="text-bold">{{ page_subcategory.name }}</h5>
-                  <!-- This part doesn't work --> 
-                  <p class="m-0">{{ post_count }} article{% if post_count != 1 %}s{% endif %}</p>
+            <div class="column col-4 col-md-6 col-sm-12">
+              <a href="{{ site.baseurl }}/{{ subcategory_name }}">
+                <div class="card card-link">
+                  <div class="card-body text-center my-4">
+                    <h5 class="text-bold">{{ page_subcategory.name }}</h5>
+                    <!-- This part doesn't work --> 
+                    <p class="m-0">nol:{{ page_subcategory }},1:{{ page_subcategory[1] }},name:{{ page_subcategory.name }} {{ post_count }} article{% if post_count != 1 %}s{% endif %}</p>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
+              </a>
+            </div>
           {% endif %}
         {% endfor %} 
       <!-- for non-subcategory pages-->
