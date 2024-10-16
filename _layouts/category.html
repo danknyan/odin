@@ -35,9 +35,6 @@ layout: default
             <!-- not sure abotu var names-->
               {% if post.category == subcategory_name %}
                 {% assign post_count = post_count | plus: 1 %}
-                <!--
-              {% else %}
-                {% assign post_count = post_count | plus: 2 %}-->
               {% endif %}
             {% endfor %}
             <div class="column col-4 col-md-6 col-sm-12">
