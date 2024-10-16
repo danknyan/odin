@@ -28,16 +28,9 @@ layout: default
         {% for subcategory in site.data.subcategory_list %}
 
           {% assign post_count = 0 %}
-
-          {% if subcategory.parent-category == page.category %}
           
-          <div class="column col-4 col-md-6 col-sm-12">
-            <a href="{{ site.baseurl }}/{{ subcategory.name }}">
-              <div class="card card-link">
-                <div class="card-body text-center my-4">
-                  <h5 class="text-bold">{{ subcategory.name }}</h5>
-
-                  <!-- For loops -->
+          {% if subcategory.parent-category == page.category %}
+          <!-- For loops -->
           
                   {% for post in site.posts %}
                   <!-- not sure abotu var names-->
@@ -45,10 +38,13 @@ layout: default
                       {% assign post_count = post_count | plus: 1 %}
                     {% endif %}
                   {% endfor %}
-  
+          <div class="column col-4 col-md-6 col-sm-12">
+            <a href="{{ site.baseurl }}/{{ subcategory.name }}">
+              <div class="card card-link">
+                <div class="card-body text-center my-4">
+                  <h5 class="text-bold">{{ subcategory.name }}</h5>
                   <!-- This part doesn't work --> 
-                  <p class="m-0">{{ subcategory | first }} {{ post_count }} article{% if post_count != 1 %}s{% endif %}</p>
-                  
+                  <p class="m-0">{{ subcategory | first }} {{ subcategory[2] }}{{ post_count }} article{% if post_count != 1 %}s{% endif %}</p>
                 </div>
               </div>
             </a>
