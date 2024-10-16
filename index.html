@@ -21,8 +21,8 @@ title: Home
                   <div class="card-body text-center my-4">
                     <h5 class="text-bold">{{ page_category.name }}</h5>
                       <!-- start forloop -->
-                      {% if category.has-subcategories == true %}
-                        {% assign post_count = 10 %}
+                      {% if category_name == "my-projects" %}
+                        {% assign post_count = post_count | plus: 10 %}
                         
                         {% for subcategory in site.data.subcategory_list %}
 
