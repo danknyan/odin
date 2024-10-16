@@ -33,10 +33,11 @@ layout: default
             {% for post in site.posts %}
 
             <!-- not sure abotu var names-->
-              {% if post.category == page_subcategory.name %}
+              {% if post.category == subcategory_name %}
                 {% assign post_count = post_count | plus: 1 %}
+                <!--
               {% else %}
-                {% assign post_count = post_count | plus: 1 %}
+                {% assign post_count = post_count | plus: 2 %}-->
               {% endif %}
             {% endfor %}
             <div class="column col-4 col-md-6 col-sm-12">
@@ -45,7 +46,7 @@ layout: default
                   <div class="card-body text-center my-4">
                     <h5 class="text-bold">{{ page_subcategory.name }}</h5>
                     <!-- This part doesn't work --> 
-                    <p class="m-0">forloop:{{ subcategory | first }},name:{{ page_subcategory.name }} {{ post_count }} article{% if post_count != 1 %}s{% endif %}</p>
+                    <p class="m-0">{{ post_count }} article{% if post_count != 1 %}s{% endif %}</p>
                   </div>
                 </div>
               </a>
