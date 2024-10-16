@@ -8,6 +8,8 @@ my-projects:
 my-values:
   name: My Values
   description: motivation and philosophy
+  has-subcategories: False
 my-cv:
   name: Curriculum Vitae Test
   description: the journey thus far
+  has-subcategories: False
