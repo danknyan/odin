@@ -46,14 +46,14 @@ title: Home
                     {% assign post_count = 0 %}
                     {% if category.has-subcategories %}
                       
-                          {% for post in site.posts %}
-                            {% if post.subcategory == subcategory.name %}
-                              {% assign post_count = post_count | plus: 1 %}
-                            {% endif %}
-                          {% endfor %}
+                      {% for post in site.posts %}
+                        {% if page.category and page.category not in site.data.category_list %}
+                          {% assign post_count = post_count | plus: 1 %}
+                        {% endif %}
+                      {% endfor %}
                           
                         
-                      {% endfor %}
+                      
                     {% else %}
                       {% for post in site.posts %}
                         {% if post.category contains category_name  %}
