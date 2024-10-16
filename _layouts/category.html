@@ -26,26 +26,31 @@ layout: default
       </div>
       {% if page.has-subcategories == true %}
         {% for subcategory in site.data.subcategory_list %}
+
           {% assign post_count = 0 %}
+
           {% capture subcategory_name %}{{ subcategory | first }}{% endcapture %}
           {% assign page_subcategory = site.data.subcategory_list[subcategory_name] %}
+
           {% if page_subcategory.parent-category == page.category %}
+          
           <div class="column col-4 col-md-6 col-sm-12">
             <a href="{{ site.baseurl }}/{{ subcategory_name }}">
               <div class="card card-link">
                 <div class="card-body text-center my-4">
                   <h5 class="text-bold">{{ page_subcategory.name }}</h5>
+
                   <!-- For loops -->
           
                   {% for post in site.posts %}
                   <!-- not sure abotu var names-->
-                    {% if post.subcategory == subcategory.name %}
+                    {% if post.category == subcategory.name %}
                       {% assign post_count = post_count | plus: 1 %}
                     {% endif %}
                   {% endfor %}
   
                   <!-- This part doesn't work --> 
-                  <p class="m-0">{{ post_count }} article{% if post_count != 1 %}s{% endif %}</p>
+                  <p class="m-0">{{ subcategory.name }} {{ post_count }} article{% if post_count != 1 %}s{% endif %}</p>
                   
                 </div>
               </div>
@@ -53,6 +58,7 @@ layout: default
           </div>
           {% endif %}
         {% endfor %} 
+      <!-- for non-subcategory pages-->
       {% else %}
         {% for post in site.categories[page.category] %}
           {% include article-card.html %}
