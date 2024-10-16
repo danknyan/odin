@@ -45,7 +45,7 @@ title: Home
                     -->
                     {% assign post_count = 0 %}
                     {% if category.has-subcategories %}
-                      {% for subcategory in site.data.subcategories %}
+                      {% for subcategory in site.data.subcategory_list %}
                         {% if subcategory.parent-category == category.name %}
                           
                           {% for post in site.posts %}
