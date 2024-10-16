@@ -14,23 +14,30 @@ title: Home
           {% for category in site.data.category_list %}
           {% capture category_name %}{{ category | first }}{% endcapture %}
           {% assign page_category = site.data.category_list[category_name] %}
+          {% assign post_count = 0 %}
           <div class="column col-4 col-md-6 col-sm-12">
             <a href="{{ site.baseurl }}/{{ category_name | slugify }}">
               <div class="card card-link">
                 <div class="card-body text-center my-4">
                   <h5 class="text-bold">{{ page_category.name }}</h5>
                     <!-- start forloop -->
-                    {% assign post_count = 0 %}
                     {% if category.has-subcategories %}
-                      
-                      {% for post in site.posts %}
-                        {% if post.category and post.category not in site.data.category_list %}
-                          {% assign post_count = post_count | plus: 1 %}
-                        {% endif %}
-                      {% endfor %}
-                          
+                      {% for subcategory in site.data.subcategory_list %}
+                        {% capture subcategory_name %}{{ subcategory | first }}{% endcapture %}
+                        {% assign page_subcategory = site.data.subcategory_list[subcategory_name] %}
                         
-                      
+                        {% if page_subcategory.parent-category == category_name %}
+
+                          {% for post in site.posts %}
+                          <!-- not sure abotu var names-->
+                            {% if post.category == subcategory_name %}
+                              {% assign post_count = post_count | plus: 1 %}
+                            {% endif %}
+                          {% endfor %}
+
+                        {% endif %}
+                      {% endfor %}  
+
                     {% else %}
                       {% for post in site.posts %}
                         {% if post.category contains category_name  %}
