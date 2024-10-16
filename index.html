@@ -19,7 +19,7 @@ title: Home
               <div class="card card-link">
                 <div class="card-body text-center my-4">
                   <h5 class="text-bold">{{ page_category.name }}</h5>
-                    <!-- start forloop -->
+                    <!-- start forloop 
                     {% assign post_count = 0 %}
                     {% if category.has-subcategories == "True" %}
                       {% for subcategory in site.data.subcategory_list %}
@@ -42,6 +42,28 @@ title: Home
                         {% endif %}
                       {% endfor %}
                     {% endif %}
+                    -->
+                    {% assign post_count = 0 %}
+                    {% if category.has-subcategories %}
+                      {% for subcategory in site.data.subcategories %}
+                        {% if subcategory.parent-category == category.name %}
+                          
+                          {% for post in site.posts %}
+                            {% if post.subcategory == subcategory.name %}
+                              {% assign post_count = post_count | plus: 1 %}
+                            {% endif %}
+                          {% endfor %}
+                          
+                        {% endif %}
+                      {% endfor %}
+                    {% else %}
+                      {% for post in site.posts %}
+                        {% if post.category contains category_name  %}
+                          {% assign post_count = post_count | plus: 1 %}
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+     
                     <!-- output -->
                     
                     <p class="m-0">{{ category_name }}: {{ post_count }} article{% if post_count != 1 %}s{% endif %}</p>
