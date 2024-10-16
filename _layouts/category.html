@@ -29,16 +29,13 @@ layout: default
 
           {% assign post_count = 0 %}
 
-          {% capture subcategory_name %}{{ subcategory | first }}{% endcapture %}
-          {% assign page_subcategory = site.data.subcategory_list[subcategory_name] %}
-
-          {% if page_subcategory.parent-category == page.category %}
+          {% if subcategory.parent-category == page.category %}
           
           <div class="column col-4 col-md-6 col-sm-12">
-            <a href="{{ site.baseurl }}/{{ subcategory_name }}">
+            <a href="{{ site.baseurl }}/{{ subcategory.name }}">
               <div class="card card-link">
                 <div class="card-body text-center my-4">
-                  <h5 class="text-bold">{{ page_subcategory.name }}</h5>
+                  <h5 class="text-bold">{{ subcategory.name }}</h5>
 
                   <!-- For loops -->
           
