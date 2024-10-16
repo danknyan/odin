@@ -45,7 +45,7 @@ layout: default
                   <div class="card-body text-center my-4">
                     <h5 class="text-bold">{{ page_subcategory.name }}</h5>
                     <!-- This part doesn't work --> 
-                    <p class="m-0">first:{{ page_subcategory | first}},1:{{ page_subcategory[0] }},name:{{ page_subcategory.name }} {{ post_count }} article{% if post_count != 1 %}s{% endif %}</p>
+                    <p class="m-0">forloop:{{ subcategory }},name:{{ page_subcategory.name }} {{ post_count }} article{% if post_count != 1 %}s{% endif %}</p>
                   </div>
                 </div>
               </a>
