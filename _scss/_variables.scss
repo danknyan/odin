@@ -15,7 +15,7 @@ $hover-shadow: 0px 4px 8px rgba(45, 66, 70, 0.1);
 // Core colors
 $primary-color: #1d4c56 !default;
 $primary-color-dark: darken($primary-color, 10%) !default;
-$secondary-color: #799a0e !default;
+$secondary-color: $highlight-color !default;
 $secondary-color-dark: darken($secondary-color, 10%) !default;
 $white: #e2e1c6;
 $highlight-color: #51bac5;
