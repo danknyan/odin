@@ -24,7 +24,7 @@ baseurl: /odin # the subpath of your site, e.g. /support
 url: https://danknyan.github.io # the base hostname AND PROTOCOL for your site, e.g. http://example.com
 permalink: /:categories/:title
 
-content_type: a portfolio #Define whether this is a knowledge base, help center, or something else
+content_type: Portfolio #Define whether this is a knowledge base, help center, or something else
 use_authors: false #Set this to false to disable showing post authors
 
 brand_logo: logo.png

@@ -10,6 +10,6 @@ short-description: A project from the Google Advanced Data Analytics Course invo
 
 -----
 **Full Notebook:**
-{% assign file_path = 'assets/Waze Project Lab - Complete.html' %}
+{% assign file_path = 'assets/Waze_Project_Lab _Complete.html' %}
 {% include_relative {{file_path}} %}
 **Thank you for reading!**
