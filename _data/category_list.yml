@@ -6,10 +6,10 @@ my-projects:
   description: workflow and past projects
   has-subcategories: true
 my-values:
-  name: My Values
+  name: About Me
   description: motivation and philosophy
   has-subcategories: false
 my-cv:
-  name: Curriculum Vitae Test
+  name: Curriculum Vitae
   description: the journey thus far
   has-subcategories: false
