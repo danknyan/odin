@@ -15,10 +15,10 @@ $hover-shadow: 0px 4px 8px rgba(45, 66, 70, 0.1);
 // Core colors
 $primary-color: #1d4c56 !default;
 $primary-color-dark: darken($primary-color, 10%) !default;
-$secondary-color: $highlight-color !default;
+$secondary-color: #51bac5 !default;
 $secondary-color-dark: darken($secondary-color, 10%) !default;
 $white: #e2e1c6;
-$highlight-color: #51bac5;
+$highlight-color: $secondary-color;
 
 // Gray colors
 $dark-color: $primary-color !default;
