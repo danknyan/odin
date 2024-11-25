@@ -11,6 +11,6 @@ short-description: This notebook contains an executive summary, recommendations 
 -----
 
 **Full Notebook:**
-{% assign file_path = 'assets/hr_in_manufacturing_v1.html' %}
+{% assign file_path = 'assets/hr_in_manufacturing_v11.html' %}
 {% include_relative {{file_path}} %}
 **Thank you for reading!**
