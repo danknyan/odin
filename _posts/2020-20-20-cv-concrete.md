@@ -9,6 +9,6 @@ short-description: Fine-tuning a computer vision model to identify whether an im
 ---
 -----
 **Full Notebook:**
-{% assign file_path = 'assets/concrete_crack_prediction.html' %}
+{% assign file_path = 'assets/concrete_crack_prediction_v2.html' %}
 {% include_relative {{file_path}} %}
 **Thank you for reading!**
