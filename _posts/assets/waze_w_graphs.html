@@ -7530,7 +7530,7 @@ a.anchor-link {
 <h1 id="Executive-Summary">Executive Summary<a class="anchor-link" href="#Executive-Summary">¶</a></h1><h2 id="Background:"><strong>Background:</strong><a class="anchor-link" href="#Background:">¶</a></h2><p>This anonymized public dataset is from <em>Waze</em>, a subsidiary company of Google that provides satellite navigation software. It has been made available for training machine learning and reporting techniques in an industry typical challenge of churn classification. However, this dataset contains irregularities, missing values, and outliers.
 The <em>purpose</em> is to find factors that drive user churn to provide recommendation strategies for Waze retention team.
 This includes fine-tuning a machine learning model using these factors to predict whether or not a Waze user will churn so that the factors most responsible for churn can form the basis of a retention strategy.</p>
-<h2 id="Findings:"><strong>Findings:</strong><a class="anchor-link" href="#Findings:">¶</a></h2><img align="right" alt="Description" src="activity_days.png" width="30%"/>
+<h2 id="Findings:"><strong>Findings:</strong><a class="anchor-link" href="#Findings:">¶</a></h2><img align="right" alt="Description" src="https://danknyan.github.io/odin/assets/activity_days.png" width="30%"/>
 Approximately 17.7% of users churned in the dataset, which might be too low to produce reliable analysis and model training. 
 Correlation analysis showed that the number of days active,days driving and user tenure had been correlated towards a lower chance of churn (average -0.24). However, as active and driving had an extremely high (0.95) correlation with each other, only one was likely to be informative.
 In addition, some fields for percentages and ratios exceeded 100%, revealing errors in the dataset. This included `percent_sessions_in_last_month`, `percent_sessions_to_favorite`,`km_per_driving_day`,`sessions_per_day` ,`km_per_hour` and likely would be inreliable predictors of churn.
@@ -7544,13 +7544,13 @@ An XGBoost model provided the best analysis; however, the model's performance wa
 The following recommendations should be taken with these scores in mind.</p>
 </div>
 <div style="flex: 1;">
-<img align="left" alt="Description" src="preds_w_adj_thresh.png" width="50%"/>
-<img align="left" alt="Description" src="roc.png" style="margin-left: 10px" width="45%"/>
+<img align="left" alt="Description" src="https://danknyan.github.io/odin/assets/preds_w_adj_thresh.png" width="50%"/>
+<img align="left" alt="Description" src="https://danknyan.github.io/odin/assets/roc.png" style="margin-left: 10px" width="45%"/>
 </div>
 </div>
 <h2 id="Model-Results:"><strong>Model Results:</strong><a class="anchor-link" href="#Model-Results:">¶</a></h2><p>Active days within the last month were the strongest indicator ($-3.12&lt;shap&lt;2.73$), along with days after onboarding ($-2.61&lt;shap&lt;1.78$) and use of the favorites feature of navigation ($-1.16&lt;shap&lt;2.22$).</p>
-<img align="center" alt="Description" src="beeswarm_orginial.png"/>
-<h2 id="Recommendations:"><strong>Recommendations:</strong><a class="anchor-link" href="#Recommendations:">¶</a></h2><img align="right" alt="Description" src="total_nav_fav.png" width="30%"/>
+<img align="center" alt="Description" src="https://danknyan.github.io/odin/assets/beeswarm_orginial.png"/>
+<h2 id="Recommendations:"><strong>Recommendations:</strong><a class="anchor-link" href="#Recommendations:">¶</a></h2><img align="right" alt="Description" src="https://danknyan.github.io/odin/assets/total_nav_fav.png" width="30%"/>
 <ul>
 <li><p><strong><code>activity_days</code>:</strong> The first priority is users with less than 18 days of activity in the last month, which comprises 87.70% of all churn and only 59.47% of all users. Higher risk of churn was correlated to lower numbers of days, with 40.34% risk of churn at 3 days or less, down from 24.76% at 18 days or less.</p>
 </li>

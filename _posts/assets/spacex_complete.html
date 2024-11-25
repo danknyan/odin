@@ -7530,12 +7530,12 @@ a.anchor-link {
 <h1 id="Executive-Summary:"><strong>Executive Summary</strong>:<a class="anchor-link" href="#Executive-Summary:">¶</a></h1><h2 id="Background:">Background:<a class="anchor-link" href="#Background:">¶</a></h2><p><strong>Technical</strong>: Obtaining and integrating data from APIs and webscraping are essential skills for data professionals. As such, this project is the result of  practice using APIs (SpaceX API) and webscraping (bs4) to obtain and compare private and public datasets for greater: model result insights, dataset insights and better final recommendations. Model interpretation used <a href="https://shap.readthedocs.io/en/latest/example_notebooks/overviews/An%20introduction%20to%20explainable%20AI%20with%20Shapley%20values.html">Shapley (aka SHAP) values</a> to measure the model's feature importances and their degree of impact on predictions, especially useful in this case as a Random Forest Classifier yielded the best result on validation data.</p>
 <p><strong>Business</strong>: Since its first successful landing in 2014, SpaceX has achieved a success rate of over 80%. Having a data team that could understand and gather the key factors that influence landing success is crucial their ongoing success. This project's analysis uses various machine learning classification techniques to identify the most significant features impacting booster landing outcomes, drawing from historical launch data including parameters such as payload mass, launch site, orbital target, and booster configuration.</p>
 <div>
-<h2 id="Findings:">Findings:<a class="anchor-link" href="#Findings:">¶</a></h2><img align="right" alt="Description" src="hardware_v_class_v_time.png" width="30%"/>
+<h2 id="Findings:">Findings:<a class="anchor-link" href="#Findings:">¶</a></h2><img align="right" alt="Description" src="src=https://danknyan.github.io/odin/assets/hardware_v_class_v_time.png" width="30%"/>
 <p>The class balances within the datasets were acceptable with Webscrape data containing 29.75% landing failures and API containing 33.33% landing failures.</p>
 <p>According to the initial correlation analysis, as design revisions were made over time, the factors of <code>flight number</code>, <code>date</code>, and <code>block</code> increased as they are all incremental data. Similarly, blocks weren't the only incremental design improvements as <code>grid fins</code> and landing <code>legs</code> were introduced. Post-2015 Hardware configurations tended to include <code>grid fins</code> (small titanium wings that provide steering capacity) and landing <code>legs</code> (telescoping carbon fiber appendages to stabilize upon touchdown). Their consistent usage was highly correlated to landing success. For the rocket itself, <code>reused</code> rockets and the latest <code>block</code> "Block 5" were consistently strong indicators of success. All of these factors were positively correleated with landing outcomes.</p>
 <p>For <code>launch sites</code>, most early launches occured at "CCSFS", resulting in a negative correlation with success (-0.18). Both datasets' correlations were positive toward "KSC" as a launch site.</p>
 <p><code>Payload mass</code> of less than 8000 kg tended to be the most problematic overall especially for lower <code>orbit</code> (esp. LEO, ISS, PO). Both datasets show that lower weights struggled in a way that heavier payloads did not.</p>
-<img align="right" alt="Description" src="orbit_v_outcome.png" width="30%"/>
+<img align="right" alt="Description" src="https://danknyan.github.io/odin/assets/orbit_v_outcome.png" width="30%"/>
 API suggested higher `orbit` (GTO, SO) continued to suffer failures (-0.21,-0.15 correlation respectively), whereas lower orbits (esp. SSO 0.17, VLEO 0.17) except ISS tended towards success. However, only the webscrape data indicated that the "HEO" and "LEO" `orbit` had positive correlations (0.05,0.12) with negative for GTO matching the API (-0.17). 
 </div>
 <div>
@@ -7543,7 +7543,7 @@ API suggested higher `orbit` (GTO, SO) continued to suffer failures (-0.21,-0.15
 <h2>Model Analysis:</h2>
 The Random Forest model had the best scores, though other popular classification models were considered: decision trees, logistic regressors, SVCs and XGBoost Classifiers. Recall score was selected to evaluate model predictions due to the high cost of a false negative. While false positives have costs in terms of operational expenses, these are significantly lower than the cost of an unexpected crash. In the end, the random forest model produced the highest recall and f1-score (API: 0.833, Webscrape: 0.923)
 </p>
-<img alt="Description" src="beeswarm_landing.png" width="70%"/>
+<img alt="Description" src="https://danknyan.github.io/odin/assets/beeswarm_landing.png" width="70%"/>
 </div>
 <h2 id="Recommendations:">Recommendations:<a class="anchor-link" href="#Recommendations:">¶</a></h2><div style="display: flex; align-items: flex-start;">
 <div style="flex: 1; padding-right: 20px;">
@@ -7551,7 +7551,7 @@ The Random Forest model had the best scores, though other popular classification
         Payload mass should attempt to stay above 6100~kg; this mass was shown to be highly failure-prone, accounting for 75% of failures in both datasets.
    </div>
 <div style="flex: .75;">
-<img alt="Description" src="payload_hist.png" style="max-width: 75%;"/>
+<img alt="Description" src="https://danknyan.github.io/odin/assets/payload_hist.png" style="max-width: 75%;"/>
 </div>
 </div>
 <h2 id="Conclusions:">Conclusions:<a class="anchor-link" href="#Conclusions:">¶</a></h2><p>Recent hardware revisions by Space X have paid off, especially since the introduction of the Block 5. While managing payload mass and higher orbits, such as GTO continue to be a source of difficulty. SpaceX boosting landings have continued to improve, no matter which source of data one chooses.</p>
