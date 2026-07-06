@@ -6,8 +6,8 @@ category: advanced-projects
 subcategory: advanced-projects
 author: dan
 featured: true
-short-description: "A Vision Transformer approach to plant disease classification on real-world smartphone imagery, reaching a 0.9471 F1 score via the FlipMix augmentation strategy."
-repo_url: https://github.com/danknyan/PLACEHOLDER_augvit-pdd
+short-description: "A Vision Transformer approach to plant disease classification via real-world smartphone imagery from developing countries."
+repo_url: https://github.com/danknyan/augvit
 ---
 
 AugViT investigates Vision Transformers (ViTs), paired with aggressive regularisation, for plant disease diagnosis on the **FieldPlant** dataset — real, messy, smartphone-captured imagery from rural Cameroon.
