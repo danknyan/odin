@@ -5,7 +5,7 @@ date: 2019-11-05 08:44:38 -0400
 category: natural-language-processing
 subcategory: {{page.category}}
 author: dan
-short-description: An attempt to help content creators get a view of what drives comments on their videos.
+short-description: A sentiment analysis and topic model to assess YouTube videos' comments at scale.
 ---
 -----
 
