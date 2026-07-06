@@ -1,0 +1,22 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-buttons {
+  .btn {
+    min-width: 110px;
+  }
+}
+
+// Anchor targets sit right under a fixed-ish nav; nudge scroll position so
+// headings aren't flush against the top edge.
+#projects,
+#about {
+  scroll-margin-top: 20px;
+}
+
+.about-card {
+  p {
+    line-height: 1.7;
+  }
+}
