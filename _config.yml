@@ -26,11 +26,15 @@ permalink: /:categories/:title
 
 content_type: Portfolio #Define whether this is a knowledge base, help center, or something else
 use_authors: false #Set this to false to disable showing post authors
+future: true 
 
 brand_logo: logo.png
-brand_name: Dan Risea
+brand_name: Dan Rishea
 header: Numbers & Narratives
-subheader: 
+subheader: #removed due to width
+profile_image: profile_bw.png   #  photo to /assets 
+intro: "I'm a data scientist and applied AI/NLP engineer who turns messy, real-world data into clear, actionable insight — from global news topic modeling to computer vision for agriculture. Currently completing a Master of Engineering in Data Science at the University of Sydney."
+
 
 meta_image: odin-meta.png
 
