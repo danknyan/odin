@@ -83,6 +83,9 @@ plugins:
 # their entries' file path in the `include:` list.
 #
 
+exclude:
+  - about-me.md # content source for the homepage About Me card — not a standalone page
+
 
 sass:
   sass_dir:          _scss

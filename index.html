@@ -8,7 +8,7 @@ title: Home
   <div class="container grid-xl">
 
     <!-- Featured Projects -->
-    <div class="columns">
+    <div class="columns" id="projects">
       <div class="column col-12 text-center mt-8 mb-4">
         <h2 class="text-bold">Featured Projects</h2>
         <p class="text-gray">Recent work in NLP, data science, and machine learning.</p>
@@ -36,29 +36,25 @@ title: Home
     </div>
     {% endif %}
 
-    <!-- Coursework & Certifications -->
-    {% if site.data.certifications %}
-    <div class="columns">
+    <!-- About Me -->
+    <div class="columns" id="about">
       <div class="column col-12 text-center mt-12 mb-4">
-        <h3 class="text-bold">Coursework &amp; Certifications</h3>
+        <h2 class="text-bold">About Me</h2>
       </div>
       <div class="column col-8 col-mx-auto col-sm-12">
-        <ul class="cert-list">
-          {% for cert in site.data.certifications %}
-          <li>
-            <span class="text-bold">{{ cert.name }}</span>
-            <span class="text-gray text-small"> — {{ cert.issuer }}</span>
-          </li>
-          {% endfor %}
-        </ul>
+        <div class="card">
+          <div class="card-body about-card">
+            {% capture about_raw %}{% include_relative about-me.md %}{% endcapture %}
+            {{ about_raw | markdownify }}
+          </div>
+        </div>
       </div>
     </div>
-    {% endif %}
 
     <!-- CV CTA -->
     <div class="columns">
       <div class="column col-12 text-center my-12">
-        <a href="{{ site.baseurl }}/my-cv" class="btn btn-lg btn-primary">View My CV</a>
+        <a href="{{ site.baseurl }}/my-cv/" class="btn btn-lg btn-primary">View My CV</a>
       </div>
     </div>
 

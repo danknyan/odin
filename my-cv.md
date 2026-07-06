@@ -1,7 +1,7 @@
 ---
-layout: category
-category: my-cv
+layout: page
 title: My CV
+permalink: /my-cv/
 ---
 
 # Dan Rishea
