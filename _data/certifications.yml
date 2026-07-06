@@ -1,0 +1,11 @@
+# Light list shown in the "Coursework & Certifications" section on the homepage.
+# Add or edit entries here — no need to touch index.html.
+
+- name: IBM Data Science Professional Certificate
+  issuer: IBM
+- name: Natural Language Processing Certificate
+  issuer: IBM
+- name: Google Advanced Data Analytics Certificate
+  issuer: Google
+- name: IBM AI Engineering Professional Certificate
+  issuer: IBM
