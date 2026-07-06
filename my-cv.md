@@ -27,27 +27,27 @@ Data scientist and applied AI engineer who turns fragmented, real-world data int
 
 ## Experience
 
-### Data & Operations Division 1 — Stipended Volunteer | JICA
+#### Data & Operations Division 1 — Stipended Volunteer | JICA
 *May 2023 – Jul 2024*
 
 - Identified gaps in program data and designed alternative indicators to enable meaningful analysis of educational outcomes.
 - Built predictive models to identify key drivers of educational outcomes, cross-validating findings across multiple analytical approaches.
 - Authored executive summaries and built dashboards for internal and external stakeholders; conducted end-to-end data wrangling and exploratory analysis.
 
-### Project Design & Monitoring Lead, General Affairs | Alpros
+#### Project Design & Monitoring Lead, General Affairs | Alpros
 *Apr 2019 – Dec 2022*
 
 - Designed automated content-validation pipelines to ensure learning materials matched target audience proficiency levels, including an automated video-leveling workflow.
 - Built rule-based logic for automated program/material selection and centralized a digital knowledge base, cutting material prep time.
 - Integrated several scheduling and CRM platforms into a unified contractor booking workflow.
 
-### Corporate Training Consultant | Alpros / ALC Education Inc.
+#### Corporate Training Consultant | Alpros / ALC Education Inc.
 *Oct 2016 – Mar 2019*
 
 - Led needs analysis and stakeholder consultations to define scope, objectives, and timelines for workforce and organizational development programs.
 - Designed and delivered soft-skills and test-preparation curricula across on-site, in-house, and online formats.
 
-### Early Career — HR Development & Education | Shukutoku University, Miss Paris Academy, and others
+#### Early Career — HR Development & Education | Shukutoku University, Miss Paris Academy, and others
 *Apr 2012 – Nov 2016*
 
 - Designed curricula and assessment criteria across institutions, including K-6 programs, and provided HR consultation across compliance, performance, and recruitment.
