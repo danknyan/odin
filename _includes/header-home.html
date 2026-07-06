@@ -3,10 +3,20 @@
     <div class="header ">
       {% include nav.html %}
       <header class="container grid-xl landing-header">
-        <div class="columns pt-12 pb-8">
+        <div class="columns pt-4 pb-2">
           <div class="column col-11 col-mx-auto text-center">
+            <div class="avatar-hero mb-4">
+              {% if site.profile_image %}
+              <img src="{{ site.baseurl }}/assets/{{ site.profile_image }}" alt="{{ site.brand_name }}">
+              {% else %}
+              {{ site.initials | default: "DR" }}
+              {% endif %}
+            </div>
             <h1 class="mt-2 super-h1">{{ site.header }}</h1>
             <h4 class="text-secondary" color=$highlight-color>{{ site.subheader }}</h4>
+            {% if site.intro %}
+            <p class="intro-text mt-2 mx-auto">{{ site.intro }}</p>
+            {% endif %}
           </div>
         </div>
       </header>
