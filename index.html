@@ -2,61 +2,65 @@
 layout: default
 title: Home
 ---
-{% assign page_category = site.data.category_list[page.category] %}
+{% include header-home.html %}
 
-  {% include header-home.html %}
-    <div class="container-full">
-      <div class="container grid-xl">
-        <div class="columns negative-m-s">
-          <div class="column col-12 text-center">
-            <h6 class="text-secondary"> </h6>
-          </div>
-          {% for category in site.data.category_list %}
-            {% capture category_name %}{{ category | first }}{% endcapture %}
-            {% assign page_category = site.data.category_list[category_name] %}
-            {% assign post_count = 0 %}
-            <div class="column col-4 col-md-6 col-sm-12">
-              <a href="{{ site.baseurl }}/{{ category_name | slugify }}">
-                <div class="card card-link">
-                  <div class="card-body text-center my-4">
-                    <h5 class="text-bold">{{ page_category.name }}</h5>
-                      <!-- start forloop -->
-                      {% if category_name == "my-projects" %}
-                        
-                        {% for subcategory in site.data.subcategory_list %}
+<div class="container-full">
+  <div class="container grid-xl">
 
-                          {% capture subcategory_name %}{{ subcategory | first }}{% endcapture %}
-                          {% assign page_subcategory = site.data.subcategory_list[subcategory_name] %}
-                          
-                          {% if page_subcategory.parent-category == category_name %}
-
-                            {% for post in site.posts %}
-                              {% if post.category == subcategory_name %}
-                                {% assign post_count = post_count | plus: 1 %}
-                              {% endif %}
-                            {% endfor %}
-
-                          {% endif %}
-                        {% endfor %}  
-
-                      {% else %}
-                        {% for post in site.posts %}
-                          {% if post.category contains category_name  %}
-                            {% assign post_count = post_count | plus: 1 %}
-                          {% endif %}
-                        {% endfor %}
-                      {% endif %}
-      
-                      <!-- output -->
-                      
-                      <p class="m-0">{{ post_count }} article{% if post_count != 1 %}s{% endif %}</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          {% endfor %} 
-
-          {% include more-help.html %}
-        </div>
+    <!-- Featured Projects -->
+    <div class="columns">
+      <div class="column col-12 text-center mt-8 mb-4">
+        <h2 class="text-bold">Featured Projects</h2>
+        <p class="text-gray">Recent work in NLP, data science, and machine learning.</p>
       </div>
     </div>
+    <div class="columns">
+      {% assign featured_posts = site.posts | where: "featured", true | sort: "date" | reverse %}
+      {% for post in featured_posts %}
+        {% include project-card.html post=post col_class="col-6 col-sm-12" %}
+      {% endfor %}
+    </div>
+
+    <!-- More Projects -->
+    {% assign other_posts = site.posts | where_exp: "post", "post.featured != true" %}
+    {% if other_posts.size > 0 %}
+    <div class="columns">
+      <div class="column col-12 text-center mt-12 mb-4">
+        <h3 class="text-bold">More Projects</h3>
+      </div>
+    </div>
+    <div class="columns">
+      {% for post in other_posts %}
+        {% include project-card.html post=post %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Coursework & Certifications -->
+    {% if site.data.certifications %}
+    <div class="columns">
+      <div class="column col-12 text-center mt-12 mb-4">
+        <h3 class="text-bold">Coursework &amp; Certifications</h3>
+      </div>
+      <div class="column col-8 col-mx-auto col-sm-12">
+        <ul class="cert-list">
+          {% for cert in site.data.certifications %}
+          <li>
+            <span class="text-bold">{{ cert.name }}</span>
+            <span class="text-gray text-small"> — {{ cert.issuer }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- CV CTA -->
+    <div class="columns">
+      <div class="column col-12 text-center my-12">
+        <a href="{{ site.baseurl }}/my-cv" class="btn btn-lg btn-primary">View My CV</a>
+      </div>
+    </div>
+
+  </div>
+</div>
