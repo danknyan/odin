@@ -7,8 +7,8 @@ subcategory: natural-language-processing
 author: dan
 featured: true
 short-description: "An end-to-end NLP pipeline turning GDELT news data into an interactive global topic map, powered by hierarchical topic modeling and LLM-generated labels."
-repo_url: https://github.com/danknyan/PLACEHOLDER_global-news-lens
-demo_url: https://danknyan.github.io/PLACEHOLDER_global-news-lens/
+repo_url: https://github.com/danknyan/world-news-map
+demo_url: https://danknyan.github.io/world-news-map/
 ---
 
 Global News Lens is an end-to-end NLP pipeline that transforms raw global news text into an interactive choropleth dashboard of world news topics, built on data from [GDELT](https://www.gdeltproject.org/).
