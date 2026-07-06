@@ -13,18 +13,18 @@ $main-shadow: 0 4px 6px rgba(55,65,80,0.7);
 $hover-shadow: 0px 4px 8px rgba(45, 66, 70, 0.1);
 
 // Core colors
-$primary-color: #1d4c56 !default;
+$primary-color: #7a3b2e !default;
 $primary-color-dark: darken($primary-color, 10%) !default;
-$secondary-color: #51bac5 !default;
+$secondary-color: #e0893e !default;
 $secondary-color-dark: darken($secondary-color, 10%) !default;
 $white: #e2e1c6;
 $highlight-color: $secondary-color;
 
 // Gray colors
 $dark-color: $primary-color !default;
-$gray-color: #d7d8e1 !default;
-$gray-color-light: #f5f6ff !default;
-$gray-color-dark: #9b9caf !default;
+$gray-color: #e3d9cd !default;
+$gray-color-light: #f8f3ec !default;
+$gray-color-dark: #9c8b7d !default;
 
 $border-color: $gray-color-light !default;
 $border-color-dark: darken($border-color, 10%) !default;
@@ -39,7 +39,7 @@ $error: #fa5246 !default;
 
 
 // Other colors
-$code-color: #d73e48 !default;
+$code-color: #c1502e !default;
 $highgray-color-light: $highlight-color !default;
 $body-bg: $gray-color-light !default;
 $body-font-color: lighten($dark-color, 5%) !default;
