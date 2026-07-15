@@ -10,27 +10,89 @@
   padding: 0.15rem 0.6rem;
 }
 
-.project-card {
-  height: 100%;
-
-  .card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .project-card-repo-link {
-    color: $gray-color-dark;
-    cursor: pointer;
-    &:hover {
-      color: $highlight-color;
-    }
-  }
-}
-
-.project-card-link {
+.project-tile-link {
   display: block;
   height: 100%;
+  text-decoration: none;
+}
+
+.project-tile {
+  position: relative;
+  height: 260px;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  margin: 0.4rem 0;
+  box-shadow: $light-shadow;
+  transition: box-shadow 0.25s ease;
+}
+
+.project-tile-link:hover .project-tile,
+.project-tile-link:focus .project-tile {
+  box-shadow: $hover-shadow;
+}
+
+.project-tile-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  background-color: $gray-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s ease;
+}
+
+.project-tile-link:hover .project-tile-image,
+.project-tile-link:focus .project-tile-image {
+  transform: scale(1.05);
+}
+
+.project-tile-placeholder-icon {
+  font-size: 3rem;
+  color: $gray-color-dark;
+}
+
+.project-tile-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  background: linear-gradient(
+    to top,
+    rgba($primary-color, 0.94) 0%,
+    rgba($primary-color, 0.6) 55%,
+    rgba($primary-color, 0) 100%
+  );
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-tile-link:hover .project-tile-overlay,
+.project-tile-link:focus .project-tile-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-tile-title {
+  color: $white;
+  margin: 0.3rem 0 0.2rem;
+}
+
+.project-tile-desc {
+  color: rgba($white, 0.92);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
 }
 
 .cert-list {
