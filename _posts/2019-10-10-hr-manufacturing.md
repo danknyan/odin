@@ -5,6 +5,7 @@ date: 2019-11-05 08:44:38 -0400
 category: machine-learning
 subcategory: {{page.category}}
 author: dan
+image: correlation.png
 short-description: This notebook contains an executive summary, recommendations to reduce churn for an Indonesian manufacturing company.
 ---
 
