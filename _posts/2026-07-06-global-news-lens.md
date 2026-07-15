@@ -6,6 +6,7 @@ category: natural-language-processing
 subcategory: natural-language-processing
 author: dan
 featured: true
+image: world-news-preview.png
 short-description: "An end-to-end NLP pipeline turning GDELT news data into an interactive global topic map, powered by hierarchical topic modeling and LLM-generated labels."
 repo_url: https://github.com/danknyan/world-news-map
 demo_url: https://danknyan.github.io/world-news-map/
