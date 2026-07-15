@@ -1,26 +1,21 @@
 {% assign card_category = site.data.subcategory_list[include.post.category] %}
 <div class="column {{ include.col_class | default: 'col-4 col-md-6 col-sm-12' }}">
-  <a href="{{ site.baseurl }}{{ include.post.url }}" class="card-link project-card-link">
-    <div class="card project-card my-1">
-      {% if include.post.image %}
-      <div class="card-image">
-        <img src="{{ site.baseurl }}/assets/{{ include.post.image }}" alt="{{ include.post.title }}">
+  <a href="{{ site.baseurl }}{{ include.post.url }}" class="project-tile-link">
+    <div class="project-tile">
+      <div class="project-tile-image"
+        {% if include.post.image %}
+        style="background-image: url('{{ site.baseurl }}/assets/{{ include.post.image }}');"
+        {% endif %}>
+        {% unless include.post.image %}
+        <i class="uil uil-image project-tile-placeholder-icon"></i>
+        {% endunless %}
       </div>
-      {% endif %}
-      <div class="card-body">
+      <div class="project-tile-overlay">
         {% if card_category %}
         <span class="tag-pill">{{ card_category.name }}</span>
         {% endif %}
-        <h5 class="text-semibold mt-2 mb-1">{{ include.post.title }}</h5>
-        <p class="text-dark m-0">{{ include.post.short-description }}</p>
-      </div>
-      <div class="card-footer">
-        <span class="text-primary text-bold">View Project <i class="uil uil-arrow-right"></i></span>
-        {% if include.post.repo_url %}
-        <span class="project-card-repo-link" onclick="event.preventDefault(); event.stopPropagation(); window.open('{{ include.post.repo_url }}', '_blank');">
-          <i class="uil uil-github"></i> Code
-        </span>
-        {% endif %}
+        <h5 class="project-tile-title">{{ include.post.title }}</h5>
+        <p class="project-tile-desc">{{ include.post.short-description }}</p>
       </div>
     </div>
   </a>
