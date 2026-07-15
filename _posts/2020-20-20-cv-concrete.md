@@ -5,6 +5,7 @@ date: 2019-11-05 08:44:38 -0400
 category: advanced-projects
 subcategory: advanced-projects
 author: dan
+image: example_conc.png
 short-description: Fine-tuning a computer vision model to identify whether an image of concrete contains cracks.
 ---
 **Full Notebook:**
