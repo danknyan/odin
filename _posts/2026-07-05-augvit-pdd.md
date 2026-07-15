@@ -5,6 +5,7 @@ date: 2026-07-05 09:00:00 -0400
 category: advanced-projects
 subcategory: advanced-projects
 author: dan
+image: conf_mat_annot.png
 featured: true
 short-description: "A Vision Transformer approach to plant disease classification via real-world smartphone imagery from developing countries."
 repo_url: https://github.com/danknyan/augvit
