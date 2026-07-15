@@ -5,6 +5,7 @@ date: 2019-11-05 08:44:38 -0400
 category: machine-learning
 subcategory: {{page.category}}
 author: dan
+image: activity_days.png
 short-description: A project from the Google Advanced Data Analytics Course involving trying to make the best of a bad dataset.
 ---
 
